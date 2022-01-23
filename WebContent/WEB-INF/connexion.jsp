@@ -72,7 +72,7 @@
 	    	<div class="container">
 	    		<div class="row no-gutters d-flex align-items-center align-items-stretch">
 	    			<div class="col-md-4 d-flex align-items-center py-4">
-	    				<a class="navbar-brand" href="index.html">Polydev <span>Ecole du developpeur</span></a>
+	    				<a class="navbar-brand" href="index.html">Videos <span>Streaming</span></a>
 	    			</div>
 			    </div>
 			  </div>
