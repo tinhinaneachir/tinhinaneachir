@@ -1,0 +1,67 @@
+@media (min-width:768px)  { 
+    #divcenter{
+        padding-left: 100px;
+         width: 370px;
+    }
+  
+}
+
+@media (max-width:768px )and (min-width:520px )  { 
+    #divcenter{
+        padding-left: 80px;
+         width: 350px;
+    }
+}
+
+@media (max-width:520px)  { 
+    #divcenter{
+        padding-left: 60px;
+         width: 250px;
+    }
+}
+
+h1,h4 {
+    font-weight: bold;
+    color: #fff;
+}
+a {
+    color: #343a40;
+    font-weight: bolder;
+    font-size: large;
+} 
+/* #right {background-color: brown;} */
+/************************* css navbar***************************************/
+nav ul li a  {
+    text-transform: uppercase;
+    font-size:smaller;
+    font-weight:bold;
+    font-family: 'Lato', sans-serif;
+}
+nav{
+    color: black;
+    background-color: black;
+}
+@media (min-width:768px)  { 
+    #left{   
+        float: left;       
+     width: auto;}
+     #right{
+         float: right;      
+     }
+     
+}
+/************************* css body de la âge connexion ***************************************/
+    #SignUpIN{
+        background-image: url("background.jpg");
+        width: auto;
+        height: 800px;   
+    }
+
+#transp{
+     padding-top: 110px; 
+     background: rgba(8, 8, 8, 0.7);
+
+     width: 710px;
+     height:802px;
+     padding-left: 70px;
+}

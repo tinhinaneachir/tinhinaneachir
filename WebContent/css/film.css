@@ -1,0 +1,118 @@
+a{ text-transform: uppercase;
+    font-size:smaller;
+    font-weight:bold;
+    font-family: 'Lato', sans-serif;
+}
+nav ul li a  {
+    text-transform: uppercase;
+    font-size:smaller;
+    font-weight:bold;
+    font-family: 'Lato', sans-serif;
+}
+nav{
+    color: black;
+    background-color: black;
+}
+ h1 {
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-size:xx-large;
+    font-weight:bold;
+    font-family: 'Lato', sans-serif; 
+}
+h3 {
+    margin-bottom:  40px;
+    text-transform: uppercase;
+    font-size:xx-large;
+    font-weight:bold;
+    font-family: 'Lato', sans-serif; 
+}
+.scrollbar {
+    float: left;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x:hidden;
+    margin-bottom: 25px;
+    }
+    .force-overflow {
+    min-height: 0px;
+    max-height: 265px;
+    }
+    .scrollbar-warning::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #161313;
+    border-radius: 10px; }
+    .scrollbar-warning::-webkit-scrollbar {
+    width: 12px;
+    background-color: #131212; }  
+    .scrollbar-warning::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: grey; }   
+    .scrollbar-warning {
+    scrollbar-color: grey #070707;
+    }
+
+.section1{
+    background-image: url("background.jpg");
+    height:100%;
+}
+
+.transp{
+    background: rgba(8, 8, 8, 0.9);
+    height:120%;
+    width: 100%;
+    padding-top:20px
+}
+.img{
+margin-bottom: 20px;
+}
+img{
+    width: auto;
+    height: 200px;
+}
+.imgetoile{
+    padding: 50px 0 0 20px  ;
+}
+.grey{color: rgb(255, 232, 232);
+font-size:smaller;}
+.fa-star{
+      color:rgb(245, 235, 235);
+}
+.checked {
+    color: red;
+  }
+.logo img{
+    width: 150px;
+    height: 27px;
+}
+form{padding-top: 15px;
+margin-bottom: 10px;}
+
+p{
+    width: 20px;
+}
+
+  
+  .custom-toggler.navbar-toggler {
+    border-color: rgb(252, 238, 247);
+    
+  }     
+.padding{
+padding-top: 5px;
+}
+.image{ vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+margin-top:10px}
+.petittext{
+    font-size: small;
+    color: rgb(253, 249, 249);
+}
+.text{
+    color: rgb(250, 6, 6);
+    font-size: large;
+}
+.padding{margin-right: 10px;}
