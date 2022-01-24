@@ -41,4 +41,13 @@ public class VideoService {
 			throw new ServiceException(e, "erreur : connexion à la base de données");
 		}
 	}
+
+	public void supprimerVideoFavorite(int idVideo, int userId) throws ServiceException {
+		try {
+			 videoDao.supprimerVideoFavorite(idVideo, userId);
+		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println(e.getMessage());
+			throw new ServiceException(e, "erreur : suppression video impossible");
+		}
+	}
 }

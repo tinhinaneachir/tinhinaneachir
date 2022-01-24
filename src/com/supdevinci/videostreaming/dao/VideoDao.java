@@ -76,6 +76,25 @@ public class VideoDao extends Dao{
         }
 	}
 	
+	public int supprimerVideoFavorite(int videoId, int userId) throws SQLException, ClassNotFoundException {
+		super.chargerDriver();
+		
+		Connection connexion = null;
+		PreparedStatement statement = null;
+		int resultat = 0;
+		try {
+			connexion =  ouvrirConnexion();
+			String sql = "delete from vs_video_favorite where videoId=? and userId=?;";
+			statement = connexion.prepareStatement(sql);
+			statement.setInt(1, videoId);
+			statement.setInt(2, userId);
+			resultat = statement.executeUpdate();
+		}finally {
+            fermerConnexion(connexion, statement, null);
+        }
+		return resultat;
+	}
+	
 	//-----------------mapper  liste videos-----------------
 	private List<VideoBean> mapperListeVideo(ResultSet resultat) throws SQLException {
 		List<VideoBean> listeVideos = new ArrayList<VideoBean>();
