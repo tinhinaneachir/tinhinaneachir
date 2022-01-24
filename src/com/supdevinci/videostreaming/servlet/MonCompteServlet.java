@@ -21,6 +21,7 @@ import com.supdevinci.videostreaming.service.VideoService;
 public class MonCompteServlet extends HttpServlet{
 	
 	final static String OP_VIDEO_FAVORITE_SUPPRESSION = "vf_suppression";
+	final static String OP_VIDEO_NOTATION = "vf_NOTATION";
 	
 	UserService userService;
 	VideoService videoService;
@@ -54,20 +55,28 @@ public class MonCompteServlet extends HttpServlet{
 		}
 		
 		request.getServletContext().getRequestDispatcher("/WEB-INF/moncompte.jsp").forward(request, response);
-		
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String op = (String) request.getParameter("op");
-		String idVideo = (String) request.getParameter("idVideo");
+		int idVideo = convertirInt((String) request.getParameter("idVideo"));
 		UserBean user =  (UserBean) request.getSession().getAttribute("currentUser");
-		if(OP_VIDEO_FAVORITE_SUPPRESSION.contentEquals(op)) {
-			
-			
-			
+		if(idVideo!= 0 && OP_VIDEO_FAVORITE_SUPPRESSION.contentEquals(op)) {
+			try {
+				videoService.supprimerVideoFavorite(idVideo, user.getId());
+			} catch (ServiceException e) {
+
+			}	
 		}
 		doGet( request,  response);
+	}
+
+	private int convertirInt(String valeur) {
+		try {
+			return Integer.parseInt(valeur);
+		} catch(Exception e) {
+			return 0;
+		}
 	}
 
 }

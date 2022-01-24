@@ -113,7 +113,7 @@
 						      
 						</video>
 						<form  method="post"> 
-							<input type="hidden" name="op" value="suppression" />
+							<input type="hidden" name="op" value="vf_suppression" />
 							<input type="hidden" name="idVideo" value="${video.getId() }" />
 							<button  class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center" type="submit">
 				    			<span>Supprimer</span>
