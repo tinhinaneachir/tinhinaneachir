@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.exception;
+package com.supdevinci.videostreaming.exception;
 
 public class ServiceException extends Exception{
 	

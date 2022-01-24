@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="streamingVideo">
+            
+    
+    <wb-module deploy-name="videoStreaming">
+                        
+        
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="streamingVideo"/>
-        <property name="java-output-path" value="/streamingVideo/build/classes"/>
+                        
+        
+        <property name="java-output-path" value="/videoStreaming/build/classes"/>
+        <property name="context-root" value="videoStreaming"/>
+                    
+    
     </wb-module>
+        
+
 </project-modules>

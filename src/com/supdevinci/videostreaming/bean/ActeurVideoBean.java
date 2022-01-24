@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.bean;
+package com.supdevinci.videostreaming.bean;
 
 public class ActeurVideoBean {
 	

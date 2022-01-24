@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.dao;
+package com.supdevinci.videostreaming.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

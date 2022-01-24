@@ -1,6 +1,4 @@
-package com.supdevinci.streamingvideo.dao;
-
-import com.supdevinci.streamingvideo.bean.VideoBean;
+package com.supdevinci.videostreaming.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,6 +9,8 @@ import java.sql.Statement;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.supdevinci.videostreaming.bean.VideoBean;
 
 
 public class VideoDao extends Dao{

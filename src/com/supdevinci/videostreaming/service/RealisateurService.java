@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.service;
+package com.supdevinci.videostreaming.service;
 
 public class RealisateurService {
 

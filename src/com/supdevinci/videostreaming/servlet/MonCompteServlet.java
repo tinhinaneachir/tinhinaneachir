@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.servlet;
+package com.supdevinci.videostreaming.servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.supdevinci.streamingvideo.bean.UserBean;
-import com.supdevinci.streamingvideo.bean.UserPreferenceBean;
-import com.supdevinci.streamingvideo.bean.VideoBean;
-import com.supdevinci.streamingvideo.exception.ServiceException;
-import com.supdevinci.streamingvideo.service.UserService;
-import com.supdevinci.streamingvideo.service.VideoService;
+import com.supdevinci.videostreaming.bean.UserBean;
+import com.supdevinci.videostreaming.bean.UserPreferenceBean;
+import com.supdevinci.videostreaming.bean.VideoBean;
+import com.supdevinci.videostreaming.exception.ServiceException;
+import com.supdevinci.videostreaming.service.UserService;
+import com.supdevinci.videostreaming.service.VideoService;
 
 @WebServlet("/moncompte")
 public class MonCompteServlet extends HttpServlet{
@@ -61,7 +61,10 @@ public class MonCompteServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String op = (String) request.getParameter("op");
 		String idVideo = (String) request.getParameter("idVideo");
+		UserBean user =  (UserBean) request.getSession().getAttribute("currentUser");
 		if(OP_VIDEO_FAVORITE_SUPPRESSION.contentEquals(op)) {
+			
+			
 			
 		}
 		doGet( request,  response);

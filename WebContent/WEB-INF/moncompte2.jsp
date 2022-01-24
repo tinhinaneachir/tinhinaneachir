@@ -68,62 +68,62 @@
         <div >
            <form action="" method="post" enctype="multipart/form-data">
               <div class="container-fluid">
-                                         <div class="row">
-                                                      <div class=" col-lg-8  col-md-8 col-sm-8  col-xs-12 col-8">                                                            <div class=" input1">
-                                                                <h4><label for="nom">Nom<span id="etoile"> *</span></label></h4>
-                                                                <div class="input">
-                                                                <input style="width:100%;"type="text"  name="nom" class="form-control " id="nom" placeholder="votre nom">
-                                                                </div>
-                                                        </div>
-                                                        <div class=" input1">
-                                                                <h4><label for="Prenom">Prenom<span id="etoile"> *</span></label></h4>
-                                                                <div class="input">
-                                                                <input style="width:100%;"type="text"  name="Prenom" class="form-control " id="nom" placeholder="votre prénom">
-                                                                </div>
-                                                        </div>
-                                                       
-                                                  </div> 
-                                              <div style="padding:20px" class=" col-lg-4  col-md-4 col-xs-4 col-xs-4 col-5"> 
-                                                    <div class="container-fluid">
-                                                      <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8">
-                                                      <?php if(!empty($_SESSION['photo'])) {?>
-                                                             <img   id="Photo"src="<?php echo $_SESSION['photo']?>" alt="Avatar" class="avatar"> 
-                                                             <?php ;}else{ ?> 
-                                                        <img   id="Photo"src="images/avatar7.jpg" alt="Avatar" class="avatar">  
-                                                        <?php } ?> 
+               <div class="row">
+                            <div class=" col-lg-8  col-md-8 col-sm-8  col-xs-12 col-8">                                                            <div class=" input1">
+                                      <h4><label for="nom">Nom<span id="etoile"> *</span></label></h4>
+                                      <div class="input">
+                                      <input style="width:100%;"type="text"  name="nom" class="form-control " id="nom" placeholder="votre nom">
+                                      </div>
+                              </div>
+                              <div class=" input1">
+                                      <h4><label for="Prenom">Prenom<span id="etoile"> *</span></label></h4>
+                                      <div class="input">
+                                      <input style="width:100%;"type="text"  name="Prenom" class="form-control " id="nom" placeholder="votre prénom">
+                                      </div>
+                              </div>
+                             
+                        </div> 
+                    <div style="padding:20px" class=" col-lg-4  col-md-4 col-xs-4 col-xs-4 col-5"> 
+                          <div class="container-fluid">
+                            <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8">
+                            <?php if(!empty($_SESSION['photo'])) {?>
+                                   <img   id="Photo"src="<?php echo $_SESSION['photo']?>" alt="Avatar" class="avatar"> 
+                                   <?php ;}else{ ?> 
+                              <img   id="Photo"src="images/avatar7.jpg" alt="Avatar" class="avatar">  
+                              <?php } ?> 
 
-                                                      </div>
-                                                      <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8"> 
-                                                        <input  onchange="displayImage(this)" type="file"   name="photo"  classe="from-control button" ></input>
-                                                      </div>
-                                              </div>   
-                                            </div> 
-                                               </div>
-                                            <div class="row">
-                                             <div style="padding-top:10px"class="container ">
-                                                    <div class=" col-8 input1">
-                                                            <div class="continuer rightcontinuer">
-                                                            <button type="submit" style="width:100%;"class="btn btn-outline-light continuer">enregistrer</button> 
-                                                            </div>
-                                                    </div>        
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-xs-8 col-sm-8"> 
+                              <input  onchange="displayImage(this)" type="file"   name="photo"  classe="from-control button" ></input>
+                            </div>
+                    </div>   
+                  </div> 
+                     </div>
+                  <div class="row">
+                   <div style="padding-top:10px"class="container ">
+                          <div class=" col-8 input1">
+                                  <div class="continuer rightcontinuer">
+                                  <button type="submit" style="width:100%;"class="btn btn-outline-light continuer">enregistrer</button> 
+                                  </div>
+                          </div>        
 
-                                                    <div class=" col-8 input1">
-                                                              <div class='rightsupprmier'>
-                                                                  <a class="btn btn-outline-light delet" style="width:100%;"  onclick="return confirm('confirmez la suppression de votre compte ?')" href="delet.php">supprimer votre compte ?</a>
-                                                              </div>
-                                                    </div>        
-                                                    <div class=" col-8 input1">
-                                                              <div class='rightsupprmier'>
-                                                                  <a href="password.php" style="width:100%;"class= "btn btn btn-outline-light delet" >modifier mon mot de passe ?</a>
-                                                              </div> 
-                                                    </div>        
-                                                    <div class="col-8 input1">
-                                                                <div class='rightsupprmier'>
-                                                                    <a href="forgot.php"style="width:100%;" class= "btn btn btn-outline-light delet" >réinitialiser mon mot de passe ?</a>
-                                                                </div> 
-                                                        </div>      
-                                             </div>
-                                            </div>
+                          <div class=" col-8 input1">
+                                    <div class='rightsupprmier'>
+                                        <a class="btn btn-outline-light delet" style="width:100%;"  onclick="return confirm('confirmez la suppression de votre compte ?')" href="delet.php">supprimer votre compte ?</a>
+                                    </div>
+                          </div>        
+                          <div class=" col-8 input1">
+                                    <div class='rightsupprmier'>
+                                        <a href="password.php" style="width:100%;"class= "btn btn btn-outline-light delet" >modifier mon mot de passe ?</a>
+                                    </div> 
+                          </div>        
+                          <div class="col-8 input1">
+                                      <div class='rightsupprmier'>
+                                          <a href="forgot.php"style="width:100%;" class= "btn btn btn-outline-light delet" >réinitialiser mon mot de passe ?</a>
+                                      </div> 
+                              </div>      
+                   </div>
+                  </div>
                    </form>
         </div>
       </div>

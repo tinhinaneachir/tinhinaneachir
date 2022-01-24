@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.dao;
+package com.supdevinci.videostreaming.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.supdevinci.streamingvideo.bean.UserBean;
-import com.supdevinci.streamingvideo.bean.UserPreferenceBean;
+import com.supdevinci.videostreaming.bean.UserBean;
+import com.supdevinci.videostreaming.bean.UserPreferenceBean;
 
 
 public class UserDao extends Dao{

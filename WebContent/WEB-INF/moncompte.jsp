@@ -2,8 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%@ page import="java.util.List" %>
-<%@ page import="com.supdevinci.streamingvideo.bean.VideoBean" %>
-<%@ page import="com.supdevinci.streamingvideo.bean.UserPreferenceBean" %>
+<%@ page import="com.supdevinci.videostreaming.bean.VideoBean" %>
+<%@ page import="com.supdevinci.videostreaming.bean.UserPreferenceBean" %>
 
 <!DOCTYPE html>
 <html lang="en">

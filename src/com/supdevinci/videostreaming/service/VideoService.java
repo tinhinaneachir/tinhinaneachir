@@ -1,11 +1,11 @@
-package com.supdevinci.streamingvideo.service;
+package com.supdevinci.videostreaming.service;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.supdevinci.streamingvideo.bean.VideoBean;
-import com.supdevinci.streamingvideo.dao.VideoDao;
-import com.supdevinci.streamingvideo.exception.ServiceException;
+import com.supdevinci.videostreaming.bean.VideoBean;
+import com.supdevinci.videostreaming.dao.VideoDao;
+import com.supdevinci.videostreaming.exception.ServiceException;
 
 public class VideoService {
 	

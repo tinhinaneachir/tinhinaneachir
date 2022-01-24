@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.servlet;
+package com.supdevinci.videostreaming.servlet;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.supdevinci.streamingvideo.bean.UserBean;
+import com.supdevinci.videostreaming.bean.UserBean;
 
 @WebFilter("/ConnexionFilter")
 public class ConnexionFilter implements Filter {
@@ -20,21 +20,21 @@ public class ConnexionFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		
+
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
-		
+
 		String uri = req.getRequestURI();
-		
+
 		HttpSession session = req.getSession(false);
-		UserBean user = session!=null ? (UserBean) session.getAttribute("currentUser") : null;
-		
-		if(user == null && !(uri.endsWith("html") || uri.endsWith("streamingVideo/connexion"))){
+		UserBean user = session != null ? (UserBean) session.getAttribute("currentUser") : null;
+
+		if (user == null && !(uri.endsWith("html") || uri.endsWith("connexion"))) {
 			res.sendRedirect("connexion");
-		}else{
+		} else {
 			chain.doFilter(request, response);
 		}
-		
+
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.supdevinci.streamingvideo.servlet;
+package com.supdevinci.videostreaming.servlet;
 
 import java.io.IOException;
 
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.supdevinci.streamingvideo.bean.UserBean;
-import com.supdevinci.streamingvideo.exception.ServiceException;
-import com.supdevinci.streamingvideo.service.UserService;
+import com.supdevinci.videostreaming.bean.UserBean;
+import com.supdevinci.videostreaming.exception.ServiceException;
+import com.supdevinci.videostreaming.service.UserService;
 
 @WebServlet("/connexion")
 public class ConnexionServlet extends HttpServlet{
