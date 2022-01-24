@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="resources/css/flaticon.css">
     <link rel="stylesheet" href="resources/css/icomoon.css">
     <link rel="stylesheet" href="resources/css/style.css">
+    
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	
 	<style type="text/css">
 		.
@@ -73,10 +78,27 @@
 				<p> Genre : <c:out value="${userPreference.getGenre()}"/>
 					- Type video : <c:out value="${userPreference.getTypeVideo()}"/>
 					  - Langue : <c:out value="${userPreference.getLangue()}"/>
-					<a href="preference" style="float: right" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+					<button id="btn-modifier-preferences" style="float: right" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
 		    			<span>modifier</span>
-		    		</a>
+		    		</button>
 	    		</p>
+				<div id="dialog-u-prefrences" title="mes preferences - ${video.getTitre() }" >
+			   		<form  method="post"> 
+			   			<input type="hidden" name="action" value="modifier_user_preference" />
+					  	Genre : <input type="text" name="genre" value="" /> <br>
+						Type  : <input type="text" name="typeVideo" value="" /> <br>
+						Langue : <input type="text" name="lngue" value="" />
+						<button id="btn-enregistrer-preferences" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+			   				<span>Enregistrer</span>
+			   			</button>
+			   		</form>
+				</div>
+				<script type="text/javascript">
+					$( "#dialog-u-prefrences" ).hide();
+					$( "#btn-modifier-preferences" ).click(function() {
+					    $( "#dialog-u-prefrences" ).dialog();
+						});
+				</script>
 			</div>
 		</div>
 		
@@ -92,9 +114,28 @@
 						      <source src="${ video.getLien() }" type="video/mp4">
 						      
 						</video>
-						<a href="notation"  class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+						<button id="btn-noter-${ video.getId() }" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
 			    			<span>Noter</span>
-			    		</a>
+			    		</button>
+			    		<div id="dialog-notation-${ video.getId() }" title="notation video - ${video.getTitre() }">
+				    		<form  method="post"> 
+							  	<input type="hidden" name="op" value="noter_video_visionnee" />
+								<input type="hidden" name="idVideo" value="${video.getId() }" />
+								note (de 1 à 5) : <input type="text" name="note" value="" />
+								commentaire :<textarea id="story" name="story" rows="3" cols="33">
+								</textarea>
+								<button type="submit" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+				    				<span>Enregistrer</span>
+				    			</button>
+				    		</form>
+						</div>
+						<script type="text/javascript">
+						$( "#dialog-notation-${ video.getId() }" ).hide();
+						$( "#btn-noter-${ video.getId() }" ).click(function() {
+						    $( "#dialog-notation-${ video.getId() }" ).dialog();
+							});
+						</script>
+
 					</div>
 				</c:forEach>
 			</div>
@@ -112,13 +153,25 @@
 						      <source src="${ video.getLien() }" type="video/mp4">
 						      
 						</video>
-						<form  method="post"> 
-							<input type="hidden" name="op" value="vf_suppression" />
-							<input type="hidden" name="idVideo" value="${video.getId() }" />
-							<button  class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center" type="submit">
-				    			<span>Supprimer</span>
-				    		</button>
-			    		</form>
+						<button id="btn-supprimer-${ video.getId() }" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center" >
+					    	<span>Supprimer</span>
+					    </button>
+						<div id="dialog-suppression-${ video.getId() }" title="suppression video - ${video.getTitre() }">
+							<form  method="post"> 
+								Voulez-vous vraimer supprimer cette video ? 
+								<input type="hidden" name="op" value="supprimer_vf_suppression" />
+								<input type="hidden" name="idVideo" value="${video.getId() }" />
+								<button type="submit" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+				    				<span>Oui</span>
+				    			</button>
+				    		</form>
+			    		</div>
+						<script type="text/javascript">
+							$( "#dialog-suppression-${ video.getId() }" ).hide();
+							$( "#btn-supprimer-${ video.getId() }" ).click(function() {
+							    $( "#dialog-suppression-${ video.getId() }" ).dialog();
+								});
+						</script>
 					</div>
 				</c:forEach>
 			</div>

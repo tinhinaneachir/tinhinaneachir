@@ -39,5 +39,10 @@ public class UserService {
 		UserPreferenceBean userPreference = userDao.recuepererUserPreferences(userId);
 		return userPreference;
 	}
+
+	public void enregisterUserPrefrences(UserPreferenceBean userPreference) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
