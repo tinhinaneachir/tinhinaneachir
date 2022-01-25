@@ -171,7 +171,7 @@
 						<div id="dialog-suppression-${ video.getId() }" title="suppression video - ${video.getTitre() }">
 							<form  method="post"> 
 								Voulez-vous vraimer supprimer cette video ? 
-								<input type="hidden" name="action" value="supprimer_vf_suppression" />
+								<input type="hidden" name="action" value="supprimer_video_favorite" />
 								<input type="hidden" name="idVideo" value="${video.getId() }" />
 								<button type="submit" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
 				    				<span>Oui</span>
