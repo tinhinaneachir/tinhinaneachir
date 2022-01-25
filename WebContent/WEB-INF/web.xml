@@ -14,7 +14,10 @@
   </servlet-mapping-->
   
  
-  
+  <resource-ref>
+	  <res-ref-name>vs-database</res-ref-name>
+	  <res-type>javax.sql.DataSource</res-type>
+  </resource-ref>
 
   <filter>
     <filter-name>ConnexionFilter</filter-name>
