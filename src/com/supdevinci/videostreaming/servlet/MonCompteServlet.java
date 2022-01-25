@@ -86,6 +86,7 @@ public class MonCompteServlet extends HttpServlet{
 		int idVideo = convertirInt((String) request.getParameter("idVideo"));
 		if(idVideo!= 0 ) {
 			NotationBean notation = new NotationBean();
+			notation.setId(convertirInt(request.getParameter("idNotation")));
 			notation.setNote(convertirInt(request.getParameter("note")));
 			notation.setCommentaire(request.getParameter("commentaire"));
 			UserBean user =  (UserBean) request.getSession().getAttribute("currentUser");
@@ -93,7 +94,11 @@ public class MonCompteServlet extends HttpServlet{
 			VideoBean video = new VideoBean();
 			notation.setVideo(video);
 			video.setId(idVideo);
-			notationService.noterVideo(notation);
+			try {
+				notationService.noterVideo(notation);
+			} catch (ServiceException e) {
+				//afficher l'erreur
+			}
 		} 
 		
 	}

@@ -115,15 +115,27 @@
 						      
 						</video>
 						<button id="btn-noter-${ video.getId() }" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
-			    			<span>Noter</span>
+			    			<span><c:choose>
+									<c:when test = "${ video.getNotation() != null}">Re-noter</c:when>
+									<c:otherwise>Noter</c:otherwise>
+								</c:choose>
+							</span>
 			    		</button>
 			    		<div id="dialog-notation-${ video.getId() }" title="notation video - ${video.getTitre() }">
 				    		<form  method="post"> 
-							  	<input type="hidden" name="op" value="noter_video_visionnee" />
-								<input type="hidden" name="idVideo" value="${video.getId() }" />
-								note (de 1 à 5) : <input type="text" name="note" value="" />
-								commentaire :<textarea id="story" name="story" rows="3" cols="33">
-								</textarea>
+							  	<input type="hidden" name="action" value="noter_video_visionnee" />
+								<input type="hidden" name="idVideo" value="${video.getId()}" />
+								<c:choose>
+									<c:when test = "${ video.getNotation() != null}">
+										<input type="hidden" name="idNotation" value="${video.getNotation().getId()}" />
+										note (de 1 à 5) : <input type="text" name="note" value="${video.getNotation().getNote()}" />
+										commentaire :<textarea  name="commentaire" rows="3" cols="33"> ${video.getNotation().getCommentaire()}</textarea>
+									</c:when>
+									<c:otherwise>
+								    	note (de 1 à 5) : <input type="text" name="note" value="" />
+										commentaire :<textarea  name="commentaire" rows="3" cols="33" value=""></textarea>
+								  	</c:otherwise>
+								</c:choose>
 								<button type="submit" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
 				    				<span>Enregistrer</span>
 				    			</button>
@@ -159,7 +171,7 @@
 						<div id="dialog-suppression-${ video.getId() }" title="suppression video - ${video.getTitre() }">
 							<form  method="post"> 
 								Voulez-vous vraimer supprimer cette video ? 
-								<input type="hidden" name="op" value="supprimer_vf_suppression" />
+								<input type="hidden" name="action" value="supprimer_vf_suppression" />
 								<input type="hidden" name="idVideo" value="${video.getId() }" />
 								<button type="submit" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
 				    				<span>Oui</span>

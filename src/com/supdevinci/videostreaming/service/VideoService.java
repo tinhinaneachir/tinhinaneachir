@@ -15,16 +15,6 @@ public class VideoService {
 		videoDao = new VideoDao();
 	}
 	
-	public List<VideoBean> recupererListeVideos() throws ServiceException {
-		try {
-			return videoDao.recupererListeVideos();
-		} catch (SQLException e) {
-			throw new ServiceException(e, "erreur : connexion à la base de données");
-		} catch (ClassNotFoundException e) {
-			throw new ServiceException(e, "erreur : connexion à la base de données");
-		}
-	}
-	
 	public List<VideoBean> recupererVideosFavorites(int userId) throws ServiceException {
 		try {
 			return videoDao.recupererVideosFavorites(userId);

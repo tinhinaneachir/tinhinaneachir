@@ -15,6 +15,7 @@ public class VideoBean {
 	private String lien;
 	
 	private RealisateurBean realisateur;
+	private NotationBean notation;
 
 	
 	
@@ -81,6 +82,12 @@ public class VideoBean {
 	}
 	public void setLien(String lien) {
 		this.lien = lien;
+	}
+	public NotationBean getNotation() {
+		return notation;
+	}
+	public void setNotation(NotationBean notation) {
+		this.notation = notation;
 	}
 
 
